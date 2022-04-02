@@ -22,4 +22,5 @@ wget
 youtube-search
 youtube-search-python
 git+https://github.com/HellBoy-OP/yt-dp-fork
-
+speedtest
+speedtest-cli
