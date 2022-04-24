@@ -25,7 +25,8 @@ class Userbot(Client):
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_name=str(config.STRING1),
-            no_updates=True,)
+            no_updates=True,
+        )
         self.two = Client(
             api_id=config.API_ID,
             api_hash=config.API_HASH,
@@ -55,6 +56,11 @@ class Userbot(Client):
         LOGGER(__name__).info(f"Starting Assistant Clients")
         if config.STRING1:
             await self.one.start()
+            try:
+                await self.one.join_chat("ENMU_CHAT_SUPPORT")
+            except:
+                pass
+            assistants.append(1)
             try:
                 await self.one.send_message(
                     config.LOG_GROUP_ID, "Assist Started Now Enjoy"
