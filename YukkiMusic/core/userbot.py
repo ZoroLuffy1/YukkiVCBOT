@@ -57,13 +57,6 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("TeamYukki")
-                await self.one.join_chat("TheYukki")
-                await self.one.join_chat("YukkiSupport")
-            except:
-                pass
-            assistants.append(1)
-            try:
                 await self.one.send_message(
                     config.LOG_GROUP_ID, "Assistant Started"
                 )
